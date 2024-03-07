@@ -5,6 +5,8 @@
   grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
   margin-top: 50px;
   justify-content: space-around;
+
+  border: 2px solid red;
 }
 
 input[type="text"] {
