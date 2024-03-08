@@ -1,7 +1,7 @@
 <section>
   <form>
-    <input type="text" placeholder="Filter by city">
-    <button class="primary" type="button">Search</button>
+    <input type="text" placeholder="Filter by city" #filter>
+    <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
   </form>
 </section>
 
@@ -10,10 +10,10 @@
   <!--
     - Iterate over housingLocationList array
     - Create multiple instances of housingLocationComponent
-    - and passes each item from the array to the corresponding instance of the HousingLocationComponent as input data. 
+    - and passes each item from the array to the corresponding instance of the HousingLocationComponent as input data.
   -->
   <app-housing-location
-    *ngFor="let housingLocation of housingLocationList" [housingLocation]="housingLocation"
+    *ngFor="let housingLocation of filteredLocationList" [housingLocation]="housingLocation"
   >
   </app-housing-location>
 </section>
